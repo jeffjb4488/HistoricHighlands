@@ -71,11 +71,7 @@
 
       var polygon = L.polygon(
         [row.area_latitude, row.area_longitude],
-        [row.area_latitude, row.area_longitude],
-        [row.area_latitude, row.area_longitude],
-        [row.area_latitude, row.area_longitude],
-        [row.area_latitude, row.area_longitude],
-       [row.area_latitude, row.area_longitude], {
+        {
         color: 'red'
       }).bindPopup(row.name);
       

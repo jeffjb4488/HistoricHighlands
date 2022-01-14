@@ -69,13 +69,16 @@
     for (var i in data) {
       var row = data[i];
 
-      var marker = L.marker(
+      var polygon = L.polygon(
         [row.area_latitude, row.area_longitude],
-        {
-        opacity: 1
+        [row.area_latitude, row.area_longitude],
+        [row.area_latitude, row.area_longitude],
+        [row.area_latitude, row.area_longitude],
+        [row.area_latitude, row.area_longitude], {
+        color: 'red'
       }).bindPopup(row.name);
       
-      marker.addTo(map);
+      polygon.addTo(map);
     }
 
   });

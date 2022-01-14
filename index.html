@@ -75,7 +75,7 @@
       marker.addTo(map);
     }
       
-      var polygon = L.marker ([row.area_latitude, row.area_longitude], {
+      var polygon = L.polygon ([row.area_latitude, row.area_longitude], {
         color: 'red'
       }).bindPopup(row.Date);
       

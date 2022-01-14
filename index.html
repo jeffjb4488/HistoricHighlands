@@ -68,19 +68,15 @@
     for (var i in data) {
       var row = data[i];
   
-       var polygon = L.polygon ([row.area_latitude, row.area_longitude], {
+       var marker = L.marker ([row.Point_Latitude, row.Point_Longitude], {
         opacity: 1
       }).bindPopup(row.Date);
       
-      polygon.addTo(map);
+      marker.addTo(map);
     }
       
        });
-    var myStyle = {
-    "color": "#ff7800",
-    "weight": 5,
-    "opacity": 0.65
-};
+    
 
   map.attributionControl.setPrefix(
     'View <a href="https://github.com/HandsOnDataViz/leaflet-map-csv" target="_blank">code on GitHub</a>'
